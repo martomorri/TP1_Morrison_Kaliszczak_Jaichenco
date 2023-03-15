@@ -5,19 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TP1</title>
+    <title>TP1 - Morrison, Kaliszczak, Jaichenco</title>
 </head>
 
 <body>
     <h1>Ingrese las notas del alumno Lautaro</h1>
+    <img id="imagen" src=""><br><br>
     <label>Nota de Matematica:</label>
-    <input required type="text" id="nota1"><br><br>
+    <input required type="text" id="Matematica"><br><br>
     <label>Nota de Lengua:</label>
-    <input required type="text" id="nota2"><br><br>
+    <input required type="text" id="Lengua"><br><br>
     <label>Nota de EFSI:</label>
-    <input required type="text" id="nota3"><br><br>
+    <input required type="text" id="EFSI"><br><br>
     <button id="promedio" onclick="calcularPromedio()">Calcular Promedio</button>
-    <script src="script.js"></script>
+    <button id="mayor" onclick="materiaMayor()">Mostrar Mayor Nota</button><br><br>
+    <div id="resultado"></div>
+    <script src="funciones.js"></script>
 </body>
 
 </html>
