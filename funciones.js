@@ -8,7 +8,7 @@ nota3.onkeyup = validarNota;
 var resultado = document.getElementById("resultado");
 
 var img = document.getElementById("imagen");
-img.setAttribute("src", "https://media.tenor.com/bJj-iALYKAEAAAAC/minion-bienvenido.gif");
+img.setAttribute("src", "https://y.yarn.co/6af0e8bb-240f-4f7c-9bd7-986b3d8eb0fb_text.gif");
 
 var error = document.createElement("p");
 document.body.appendChild(error);
@@ -36,11 +36,11 @@ function calcularPromedio() {
         resultado.innerHTML = "El promedio del alumno es " + promedio;
         if (promedio >= 6) {
             resultado.style.color = "green";
-            img.setAttribute("src", "https://i.pinimg.com/originals/52/0e/52/520e5212080d0fe14d1d9d2e766889e5.gif");
+            img.setAttribute("src", "https://thumbs.gfycat.com/AcclaimedImpoliteBull-size_restricted.gif");
         }
         else {
             resultado.style.color = "red";
-            img.setAttribute("src", "https://media.tenor.com/JbD_GUXxzzcAAAAC/crying-minions.gif");
+            img.setAttribute("src", "https://media.tenor.com/GXqFWGrIINsAAAAC/breaking-bad-walter-white.gif");
         }
     }
 }
@@ -68,8 +68,6 @@ function materiaMayor() {
     }
     else {
         var max = calcularMayor();
-        console.log(max);
-        console.log(nota3.value);
         var notaMax = "La nota mayor del alumno es de la/s materia/s: ";
         if (nota1.value == max) notaMax += " Matematica ";
         if (nota2.value == max) notaMax += " Lengua ";
