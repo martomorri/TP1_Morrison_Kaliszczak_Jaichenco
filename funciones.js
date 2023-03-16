@@ -16,9 +16,11 @@ document.body.appendChild(error);
 function validarNota(event) {
     if (event.target.value < 1 || event.target.value > 10) {
         error.innerHTML = "Error. Ingrese un numero del 1 al 10";
+        event.target.style.color = "red";
     }
     else {
         error.innerHTML = "";
+        event.target.style.color = "green";
     }
 }
 
@@ -68,7 +70,7 @@ function materiaMayor() {
         var max = calcularMayor();
         console.log(max);
         console.log(nota3.value);
-        var notaMax = "La nota mayor del alumno es de la/s materia/s: "
+        var notaMax = "La nota mayor del alumno es de la/s materia/s: ";
         if (nota1.value == max) notaMax += " Matematica ";
         if (nota2.value == max) notaMax += " Lengua ";
         if (nota3.value == max) notaMax += " EFSI ";
