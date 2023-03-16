@@ -26,6 +26,9 @@ function calcularPromedio() {
     if (nota1.value === "" || nota2.value === "" || nota3.value === "") {
         alert("Error. Complete por favor todas los campos.");
     }
+    else if (nota1.value < 1 || nota1.value > 10 || nota2.value < 1 || nota2.value > 10 || nota3.value < 1 || nota3.value > 10) {
+        alert("Error. Ingrese notas validas, por favor.");
+    }
     else {
         var promedio = ((parseInt(nota1.value) + parseInt(nota2.value) + parseInt(nota3.value)) / 3);
         resultado.innerHTML = "El promedio del alumno es " + promedio;
@@ -41,22 +44,23 @@ function calcularPromedio() {
 }
 
 function calcularMayor() {
-    var max = 0;
     if (nota1.value >= nota2.value && nota1.value >= nota3.value) {
-        max = nota1.value;
+        return nota1.value;
     }
     else if (nota2.value >= nota1.value && nota2.value >= nota3.value) {
-        max = nota2.value;
+        return nota2.value;
     }
     else if (nota3.value >= nota2.value && nota3.value >= nota1.value) {
-        max = nota3.value;
+        return nota3.value;
     }
-    return max;
 }
 
 function materiaMayor() {
     if (nota1.value === "" || nota2.value === "" || nota3.value === "") {
         alert("Error. Complete por favor todas los campos.");
+    }
+    else if (nota1.value < 1 || nota1.value > 10 || nota2.value < 1 || nota2.value > 10 || nota3.value < 1 || nota3.value > 10) {
+        alert("Error. Ingrese notas validas, por favor.");
     }
     else {
         var max = calcularMayor();
