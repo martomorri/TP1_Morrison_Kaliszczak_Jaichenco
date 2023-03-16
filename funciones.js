@@ -44,15 +44,17 @@ function calcularPromedio() {
 }
 
 function calcularMayor() {
-    if (nota1.value >= nota2.value && nota1.value >= nota3.value) {
-        return nota1.value;
+    var max = 0;
+    if (parseInt(nota1.value) >= parseInt(nota2.value) && parseInt(nota1.value) >= parseInt(nota3.value)) {
+        max = nota1.value;
     }
-    else if (nota2.value >= nota1.value && nota2.value >= nota3.value) {
-        return nota2.value;
+    else if (parseInt(nota2.value) >= parseInt(nota1.value) && parseInt(nota2.value) >= parseInt(nota3.value)) {
+        max = nota2.value;
     }
-    else if (nota3.value >= nota2.value && nota3.value >= nota1.value) {
-        return nota3.value;
+    else if (parseInt(nota3.value) >= parseInt(nota2.value) && parseInt(nota3.value) >= parseInt(nota1.value)) {
+        max = nota3.value;
     }
+    return max;
 }
 
 function materiaMayor() {
@@ -64,6 +66,8 @@ function materiaMayor() {
     }
     else {
         var max = calcularMayor();
+        console.log(max);
+        console.log(nota3.value);
         var notaMax = "La nota mayor del alumno es de la/s materia/s: "
         if (nota1.value == max) notaMax += " Matematica ";
         if (nota2.value == max) notaMax += " Lengua ";
